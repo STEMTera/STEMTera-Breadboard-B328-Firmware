@@ -27,7 +27,7 @@ Repository Contents
 -------------------
 
 * **/LUFA** - LUFA Framework
-* **library.properties** - STEMTera-Breadboard-B328-Firmware
+* **/STEMTera-Breadboard-B328-Firmware**
 	* **usbdfu** - USB DFU Bootloader, this bootloader can only be flashed using ICSP programmer.
 	* **usbserial** - USB CDC Serial Firmware, this firwmare can be flashed using dfu-programmer by putting STEMTera Breadboard in DFU mode (Please see below). This firmware also talks to AVRDUDE and sends Sketch to Arduino Bootloader. 
 
