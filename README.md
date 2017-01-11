@@ -28,20 +28,20 @@ Repository Contents
 
 * **/LUFA** - LUFA Framework
 * **/STEMTera-Breadboard-B328-Firmware**
-	* **usbdfu** - USB DFU Bootloader, this bootloader can only be flashed using ICSP programmer.
-	* **usbserial** - USB CDC Serial Firmware, this firwmare can be flashed using dfu-programmer by putting STEMTera Breadboard in DFU mode (Please see below). This firmware also talks to AVRDUDE and sends Sketch to Arduino Bootloader. 
+	* **/usbdfu** - USB DFU Bootloader, this bootloader can only be flashed using ICSP programmer.
+	* **/usbserial** - USB CDC Serial Firmware, this firwmare can be flashed using dfu-programmer by putting STEMTera Breadboard in DFU mode (Please see below). This firmware also talks to AVRDUDE and sends Sketch to Arduino Bootloader. 
 
 Description
 -----------
 
-This Repository is almost identical to the original Arduino Firmware with some minor modification made to accomodate the ATmega16U2 and ATmega32U2.
+This repository is almost identical to the original Arduino Firmware with some minor modification made to accomodate the ATmega16U2 and ATmega32U2.
 
 Putting STEMTera Breaboard B328 into DFU Mode and Flashing Firmware
 -------------------------------------------------------------------
 
 1. Insert a [Mini Push Button Switch](https://www.sparkfun.com/products/97) into RST2 and GND of the STEMTera Breadboard.
-2. Insert [Micro USB Cable](https://www.sparkfun.com/products/10215) into the computer and the other micro usb connector end to the STEMTera Breadboard. The GREEN LED on the STEMTera Breadboard should light up and the computer should detect the STEMTera Breadboard as Arduino UNO COM Port.
-3. Press and HOLD the Mini Push Button until you hear a USB detached sound from the computer (NOTE: Hold as firmly as possible because Windows OS is very sensitive to USB attach and detach really quickly). Release the Mini Push Button and an ATMEL USB Devices -> ATmega32U2 will appear in Device Manager.
+2. Insert [Micro USB Cable](https://www.sparkfun.com/products/10215) into the computer and the other end of the micro usb connector to the STEMTera Breadboard. The GREEN LED on the STEMTera Breadboard should light up and the STEMTera Breadboard will be detected as Arduino UNO COM Port.
+3. Press and HOLD the Mini Push Button until you hear a USB detached sound from the computer (**NOTE: Hold as firmly as possible because Windows OS is very sensitive to USB attach and detach really quickly.**). Release the Mini Push Button and an ATMEL USB Devices -> ATmega32U2 will appear in the Device Manager.
 4. Change directory to **usbserial** and type `make dfu`.
 5. The USB CDC Serial firmware will be flashed into the ATmega16U2/ATmega32U2.
 6. Remove and re-insert the USB cable to start the firmware.
